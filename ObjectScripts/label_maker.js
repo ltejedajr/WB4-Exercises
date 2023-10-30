@@ -1,7 +1,7 @@
 "use strict";
 
 let myInfo = {
-    name: "Lawrence",
+    name: "Lawrence Tejeda",
     address: "Calle 77 Sur #32-50",
     city: "Sabaneta",
     state: "Colombia",
@@ -9,12 +9,9 @@ let myInfo = {
 };
 
 function printContact(info) {
-    console.log("Name: " + info.name);
-    console.log("Address: " + info.address);
-    console.log("City: " + info.city);
-    console.log("State: " + info.state);
-    console.log("ZIP: " + info.zip);
+    console.log(info.name);
+    console.log(info.address);
+    console.log(info.city + ", " + info.state + " " + info.zip);
 }
 
-// Call the function and pass the myInfo object as an argument
 printContact(myInfo);
