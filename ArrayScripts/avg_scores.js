@@ -14,6 +14,7 @@ function getAverage(scores) {
         sum += scores[i];
     }
 
+    // Find average by dividing the total of numbers.
     let average = sum / numScores;
 
     return average;
