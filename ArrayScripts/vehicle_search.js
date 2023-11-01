@@ -127,7 +127,6 @@ for (let i = 0; i < numVehicles; i++) {
     let licPlate = vehicleInfo.licenseNo;
 
     if (licPlate.endsWith("222")) {
-
         if (!licPlate222.includes(licPlate)) {
             licPlate222.push(licPlate);
         }
