@@ -41,7 +41,7 @@ for (let i = 0; i < numMembers; i++) {
 
 // Who has been in at least 3 films?
 
-let threeFilms = []
+let threeFilms = [];
 
 for (let i = 0; i < numMembers; i++) {
     let memberInfo = academyMember[i];
@@ -58,7 +58,7 @@ for (let i = 0; i < threeFilms.length; i++) {
 
 // Who has a name that starts with "Bob"?
 
-let namesBob = []
+let namesBob = [];
 
 for (let i = 0; i < numMembers; i++) {
     let memberInfo = academyMember[i];
@@ -76,15 +76,16 @@ for (let i = 0; i < namesBob.length; i++) {
 
 // Which Academy members have been in a film that starts with "A"?
 
-let filmsA = []
+let filmsStartWithA = [];
 
 for (let i = 0; i < numMembers; i++) {
     let memberInfo = academyMember[i];
     let films = memberInfo.films;
 
-        if (films[i].startsWith("A")) {
-            if (!filmsA.includes(memberInfo.name)) {
-                filmsA.push(memberInfo.name);
+    for (let i = 0; i < films.length; i++) {
+        if (films[i].indexOf("A") == 0) {
+            if (!filmsStartWithA.includes(memberInfo.name)) {
+                filmsStartWithA.push(memberInfo.name);
             }
         }
 
@@ -93,6 +94,6 @@ for (let i = 0; i < numMembers; i++) {
 
 
 console.log('These are the Academy members which have been in a film that starts with "A": ');
-for (let i = 0; i < filmsA.length; i++) {
-    console.log(filmsA[i]);
+for (let i = 0; i < filmsStartWithA.length; i++) {
+    console.log(filmsStartWithA[i]);
 }
